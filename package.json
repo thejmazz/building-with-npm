@@ -27,7 +27,7 @@
     "prebuild": "npm run test # also runs npm run pretest",
     "pretest": "npm run lint",
 
-    "build:css": "stylus assets/styles/main.styl > dist/main.css",
+    "build:css": "autoprefixer -b 'last 2 versions' < assets/styles/main.css | cssmin > dist/main.css",
     "build:js": "browserify assets/scripts/main.js > dist/main.js",
     "build": "npm run build:css && npm run build:js",
     "prebuild:js": "npm run lint"
