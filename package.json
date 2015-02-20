@@ -10,11 +10,15 @@
     "browserify": "latest",
     "mocha": "latest"
   },
+  "config": {
+    "reporter": "xunit"
+  },
   "scripts" : {
     "lint": "jshint **.js",
     "test": "mocha test/",
     "test:another": "npm run test --anothertest.js",
     "test:xunit": "npm run test -- --reporter xunit",
+    "test:dev": "npm run test --fooproject:reporter=spec # using config"
     "env": "env # get environment variables",
 
     "prepublish": "npm run build # also runs npm run prebuild",
