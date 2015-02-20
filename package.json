@@ -11,7 +11,8 @@
     "mocha": "latest",
     "rimraf": "latest",
     "hashmark": "latest",
-    "watch": "latest"
+    "watch": "latest",
+    "parallelshell": "latest"
   },
   "config": {
     "reporter": "xunit"
@@ -30,11 +31,15 @@
     "prebuild": "npm run test # also runs npm run pretest",
     "pretest": "npm run lint",
 
-    "build:css": "autoprefixer -b '> 5%' < assets/styles/main.css | cssmin | hashmark -l 8 'dist/main.#.css'"
+    "build:css": "autoprefixer -b '> 5%' < assets/styles/main.css | cssmin | hashmark -l 8 'dist/main.#.css'",
+    "watch:css": "watch 'npm run build:css' assets/styles/",
     "build:js": "browserify assets/scripts/main.js > dist/main.js",
-    "build": "npm run build:css && npm run build:js",
+    "watch:js": "watch 'npm run build:js' assets/scripts/",
+    "build:html": "jade index.jade > dist/index.html",
+    "watch:html": "watch 'npm run build:html' assets/html",
+    "build": "npm run build:js && npm run build:css && npm run build:html",
     "prebuild:js": "npm run lint",
-    "build:watch": "watch 'npm run build' .",
+    "build:watch": "parallelshell 'npm run watch:js' 'npm run watch:css' 'npm run watch:html'",
 
     "clean": "rimraf dist"
   }
