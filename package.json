@@ -1,5 +1,5 @@
 {
-  "name": "how-to-build-with-npm",
+  "name": "building-with-npm",
   "repository": {
     "type": "git",
     "url": "git://github.com/thejmazz/building-with-npm"
@@ -19,7 +19,7 @@
     "test:another": "npm run test --anothertest.js",
     "test:xunit": "npm run test -- --reporter xunit",
     "test:yetanother": "mocha test/ --reporter $npm_package_config_reporter",
-    "test:dev": "npm run test --fooproject:reporter=spec",
+    "test:dev": "npm run test --building-with-npm:reporter=spec",
     "env": "env # get environment variables",
 
     "prepublish": "npm run build # also runs npm run prebuild",
