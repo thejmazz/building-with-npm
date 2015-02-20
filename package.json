@@ -10,7 +10,8 @@
     "browserify": "latest",
     "mocha": "latest",
     "rimraf": "latest",
-    "hashmark": "latest"
+    "hashmark": "latest",
+    "watch": "latest"
   },
   "config": {
     "reporter": "xunit"
@@ -32,7 +33,8 @@
     "build:css": "autoprefixer -b '> 5%' < assets/styles/main.css | cssmin | hashmark -l 8 'dist/main.#.css'"
     "build:js": "browserify assets/scripts/main.js > dist/main.js",
     "build": "npm run build:css && npm run build:js",
-    "prebuild:js": "npm run lint"
+    "prebuild:js": "npm run lint",
+    "build:watch": "watch 'npm run build' .",
 
     "clean": "rimraf dist"
   }
