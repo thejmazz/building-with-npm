@@ -9,7 +9,8 @@
     "jshint": "latest",
     "browserify": "latest",
     "mocha": "latest",
-    "rimraf": "latest"
+    "rimraf": "latest",
+    "hashmark": "latest"
   },
   "config": {
     "reporter": "xunit"
