@@ -3,7 +3,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/thejmazz/building-with-npm"
-  }
+  },
   "dependencies": {},
   "devDependencies": {
     "jshint": "latest",
@@ -12,6 +12,7 @@
   },
   "scripts" : {
     "lint": "jshint **.js",
-    "test": "mocha test/"
+    "test": "mocha test/",
+    "env": "env"
   }
 }
