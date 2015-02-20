@@ -12,7 +12,8 @@
     "rimraf": "latest",
     "hashmark": "latest",
     "watch": "latest",
-    "parallelshell": "latest"
+    "parallelshell": "latest",
+    "live-reload": "latest",
   },
   "config": {
     "reporter": "xunit"
@@ -41,6 +42,8 @@
     "prebuild:js": "npm run lint",
     "build:watch": "parallelshell 'npm run watch:js' 'npm run watch:css' 'npm run watch:html'",
 
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+
+    "livereload": "live-reload --port 9091 dist/"
   }
 }
