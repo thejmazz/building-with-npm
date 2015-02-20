@@ -1,5 +1,9 @@
 {
   "name": "how-to-build-with-npm",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thejmazz/building-with-npm"
+  }
   "dependencies": {},
   "devDependencies": {
     "jshint": "latest",
