@@ -15,6 +15,7 @@
   },
   "scripts" : {
     "lint": "jshint **.js",
+    "lint:nonrecursive": "jshint *.js",
     "test": "mocha test/",
     "test:another": "npm run test --anothertest.js",
     "test:xunit": "npm run test -- --reporter xunit",
