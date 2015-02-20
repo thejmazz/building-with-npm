@@ -13,6 +13,10 @@
   "scripts" : {
     "lint": "jshint **.js",
     "test": "mocha test/",
-    "env": "env"
+    "env": "env # get environment variables",
+
+    "prepublish": "npm run build # also runs npm run prebuild",
+    "prebuild": "npm run test # also runs npm run pretest",
+    "pretest": "npm run lint"
   }
 }
