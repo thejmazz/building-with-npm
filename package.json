@@ -8,7 +8,8 @@
   "devDependencies": {
     "jshint": "latest",
     "browserify": "latest",
-    "mocha": "latest"
+    "mocha": "latest",
+    "rimraf": "latest"
   },
   "config": {
     "reporter": "xunit"
@@ -31,5 +32,7 @@
     "build:js": "browserify assets/scripts/main.js > dist/main.js",
     "build": "npm run build:css && npm run build:js",
     "prebuild:js": "npm run lint"
+
+    "clean": "rimraf dist"
   }
 }
