@@ -1,5 +1,6 @@
 {
-  "name": "how-to-build-with-npm"
+  "name": "how-to-build-with-npm",
+  "dependencies": {},
   "devDependencies": {
     "jshint": "latest",
     "browserify": "latest",
