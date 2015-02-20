@@ -44,6 +44,6 @@
 
     "clean": "rimraf dist",
 
-    "livereload": "live-reload --port 9091 dist/"
+    "livereload": "live-reload --port 9091 dist/ # see live-reload_note.txt"
   }
 }
